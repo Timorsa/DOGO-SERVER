@@ -17,12 +17,15 @@ const petRouter = require('./src/routes/pet');
 const userRouter = require('./src/routes/user');
 const feedRouter = require('./src/routes/feed');
 const eventRouter = require('./src/routes/event');
-
+const authRouter = require('./src/routes/auth');
+const treatmentRouter = require('./src/routes/treatment');
 
 app.use('/pet', petRouter);
 app.use('/user', userRouter);
 app.use('/feed', feedRouter);
 app.use('/event', eventRouter);
+app.use('/auth', authRouter);
+app.use('/treatment', treatmentRouter);
 
 app.use((req, res, next) => {
   let err = new Error('Not Found !!');

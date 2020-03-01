@@ -3,7 +3,7 @@ const router = express.Router();
 
 const postCtrl = require('../controllers/postCtrl');
 
-router.get('/byUser', postCtrl.PostsByUser);
+router.get('/byUser/:id', postCtrl.PostsByUser);
 router.get('/byUsers', postCtrl.PostsByUsers);
 
 router.post('/create', postCtrl.createPost);
@@ -18,8 +18,5 @@ router.put('/comment/unbone', postCtrl.editComment);
 
 router.delete('/', postCtrl.delPost);
 router.delete('/comment', postCtrl.delComment);
-
-
-
 
 module.exports = router;
